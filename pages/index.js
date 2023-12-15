@@ -1,11 +1,18 @@
+import ArtPiecePreview from "@/components/ArtPiecePreview";
+import ArtPieces from "@/components/ArtPieces";
 import useSWR from "swr";
 
 export default function HomePage() {
-  const { data } = useSWR("https://example-apis.vercel.app/api/art");
+  const { data, error, isLoading } = useSWR(
+    "https://example-apis.vercel.app/api/art"
+  );
+
+  if (error) return <div>Failed to load</div>;
+  if (isLoading) return <div>Loading...</div>;
 
   return (
-    <div>
-      <h1>Hello from Next.js</h1>
-    </div>
+    <>
+      <ArtPieces pieces={data} />
+    </>
   );
 }
