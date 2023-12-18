@@ -12,7 +12,7 @@ export default function DetailArtPiece({ pieces, slug }) {
   const result = pieces.filter((piece) => piece.slug === slug);
   return (
     <>
-      <h2>Detail Page:</h2>
+      <h2>Art Gallery: Detailpage</h2>
       <ul>
         <li className="debug" key={result[0].slug}>
           <Image
