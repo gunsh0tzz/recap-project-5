@@ -1,14 +1,19 @@
 import useSWR from "swr";
 import Image from "next/image";
 
-export default function Spotlight({ piece }) {
-  console.log("piece:", piece);
+export default function Spotlight({ randomPiece }) {
+  console.log("piece:", randomPiece);
 
   return (
     <div className="debug">
       <h2>Random Art Piece</h2>
-      <Image src={piece.imageSource} alt="Image" width={300} height={300} />
-      <p>Artist of random art piece: {piece.artist}</p>
+      <Image
+        src={randomPiece.imageSource}
+        alt="Image"
+        width={300}
+        height={300}
+      />
+      <p>Artist of random art piece: {randomPiece.artist}</p>
     </div>
   );
 }
