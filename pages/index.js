@@ -7,6 +7,7 @@ import Spotlight from "@/components/Spotlight";
 export default function SpotlightPage({ randomPiece }) {
   return (
     <>
+      <h1>Art Gallery: Spotlight</h1>
       <Spotlight randomPiece={randomPiece} />
     </>
   );
